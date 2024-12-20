@@ -23,5 +23,5 @@ yarn-error.log
 /.zed
 coverage-report/
 *./logs
-
+package-lock.json
 node_modules
