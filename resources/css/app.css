@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'ChristmasFont';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../fonts/PWHappyChristmas.ttf') format('truetype');
+}
