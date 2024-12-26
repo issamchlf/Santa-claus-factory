@@ -25,6 +25,6 @@ class Kid extends Model
 
     public function Toy()
     {
-        return $this->hasMany(Toy::class);
+        return $this->hasMany(Toy::class)->withTimestamps();
     }
 }
