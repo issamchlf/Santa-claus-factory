@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Kid;
 use Illuminate\Http\Request;
 
 class KidController extends Controller
@@ -29,6 +30,17 @@ class KidController extends Controller
     public function store(Request $request)
     {
         //
+        $kids = Kid::create([
+            'name' => $request,
+            'surname' => $request,
+            'foto' => $request,
+            'age' => $request,
+            'gender', 'boy', 'girl' => $request,
+            'atitude', 'good', 'bad' => $request,
+        ]);
+
+        $kids->save();
+        return response()->json($kids, 200);
     }
 
     /**
