@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('pivot', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('Kid_id')->constrained('kids')->onDelete('cascade');
+            $table->foreignId('Toy_id')->constrained('toys')->onDelete('cascade');
             $table->timestamps();
         });
     }
