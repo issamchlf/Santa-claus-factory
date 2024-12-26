@@ -4,19 +4,24 @@
         Christmas Toy Factory
     </div>
     <div class="flex justify-center gap-8">
-
-        <button type="button" class="flex text-[1.3rem] gap-2 focus:outline-none text-white bg-green-600 duration-1000 hover:bg-green-700 hover:scale-110 transition-transform font-medium rounded-lg text-sm px-[.8rem] py-2.5 me-2 mb-2">
+        <a href="{{route('elve')}}">
+          <button type="button" class="flex text-[1.3rem] gap-2 focus:outline-none text-white bg-green-600 duration-1000 hover:bg-green-700 hover:scale-110 transition-transform font-medium rounded-lg text-sm px-[.8rem] py-2.5 me-2 mb-2">
             <p>🧝🏻</p>
             <p class="font-bold">Elves</p>
-        </button>
-        <button type="button" class="flex text-[1.3rem] gap-2 focus:outline-none text-white bg-red-600 duration-1000 hover:bg-red-700 hover:scale-110 transition-transform font-medium rounded-lg text-sm px-3 py-2.5 me-2 mb-2">
+        </button>  
+        </a>
+        <a href="{{route('santa')}}">
+           <button type="button" class="flex text-[1.3rem] gap-2 focus:outline-none text-white bg-red-600 duration-1000 hover:bg-red-700 hover:scale-110 transition-transform font-medium rounded-lg text-sm px-3 py-2.5 me-2 mb-2">
             <p>🎅🏻</p>
             <p class="font-bold">Santa Claus</p>
-        </button>
-        <button type="button" class="flex text-[1.3rem] gap-2 focus:outline-none text-white bg-amber-600 duration-1000 hover:bg-amber-700 hover:scale-110 transition-transform font-medium rounded-lg text-sm px-3 py-2.5 me-2 mb-2">
+            </button> 
+        </a>
+        <a href="{{route('santa')}}">
+            <button type="button" class="flex text-[1.3rem] gap-2 focus:outline-none text-white bg-amber-600 duration-1000 hover:bg-amber-700 hover:scale-110 transition-transform font-medium rounded-lg text-sm px-3 py-2.5 me-2 mb-2">
             <p>🎁</p>
             <p class="font-bold">Gifts</p>
-        </button>
+            </button>
+        </a>
     </div>
     </div>
 </header>

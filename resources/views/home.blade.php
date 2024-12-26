@@ -8,7 +8,9 @@
                 class="bg-white p-4 rounded-lg bg-center bg-cover transform hover:scale-110 transition-transform duration-500">
                 <div class="font-bold text-3xl">
                     Elves
-                    <img class="pl-8 pt-2 h-[12.8rem] w-[15rem]" src="image/Gitanillo.png" alt="" />
+                    <a href="{{route('elve')}}">
+                        <img class="pl-8 pt-2 h-[12.8rem] w-[15rem]" src="image/Gitanillo.png" alt=""/>
+                    </a>
                 </div>
             </button>
         </a>
@@ -20,7 +22,9 @@
                 class="flex justify-center bg-white p-6 rounded-lg bg-center bg-cover transform hover:scale-110 transition-transform duration-500 h-[17rem] w-[18rem]">
                 <div class="font-bold text-3xl">
                     Santa Claus
-                    <img class="pl-3 h-[13rem] w-[13rem]" src="image/GitanoSupremo.png" alt="" />
+                    <a href="{{route('santa')}}">
+                    <img class="pl-3 h-[13rem] w-[13rem]" src="image/GitanoSupremo.png" alt="" />    
+                    </a>  
                 </div>
             </button>
         </a>

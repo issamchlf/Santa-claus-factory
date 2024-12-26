@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Toy;
 use Illuminate\Http\Request;
 
 class ToyController extends Controller
@@ -12,8 +13,9 @@ class ToyController extends Controller
      public function index()
     {
         $toys = Toy::get();
-        return view('elf', compact('toys'));
+        return view('elves', compact('toys'));
     } 
+    
 
     /**
      * Show the form for creating a new resource.
