@@ -21,4 +21,8 @@ class Toy extends Model
     function minimumAges(){
         return $this->belongsTo(MinimumAge::class);
     }
+    public function Kids()
+    { 
+        return $this->belongsToMany(Kid::class)->withTimestamps();
+    }
 }
