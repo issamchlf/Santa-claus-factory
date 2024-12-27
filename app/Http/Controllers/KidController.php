@@ -39,9 +39,6 @@ class KidController extends Controller
             'atitude', 'good', 'bad' => $request->atitude,
             'country' => $request->country,
         ]);
-
-        $kids->save();
-        return response()->json($kids, 200);
     }
 
     /**
@@ -50,7 +47,6 @@ class KidController extends Controller
     public function show(string $id)
     {
         //
-        return response()->json(Kid::find($id), 200);
     }
 
     /**

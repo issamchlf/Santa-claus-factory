@@ -48,7 +48,7 @@ class KidController extends Controller
             'atitude' =>  $validated['atitude'],
         ]);
         $kids->save();
-        return response()->json($kids, 201);
+        return response()->json($kids, 200);
     }
 
     /**
