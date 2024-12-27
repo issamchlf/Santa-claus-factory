@@ -57,6 +57,8 @@ class KidController extends Controller
     public function show(string $id)
     {
         //
+        $kids = Kid::find($id);
+        return response()->json($kids, 200);
     }
 
     /**
@@ -73,6 +75,27 @@ class KidController extends Controller
     public function update(Request $request, string $id)
     {
         //
+        $kids = kid::find($id);
+
+        $validated = $request->validate([
+            'name' => 'string',
+            'surname' => 'string',
+            'photo' => 'string',
+            'age' => 'integer',
+            'gender' => 'string',
+            'atitude' => 'string'
+        ]);
+
+        $kids->update([
+            'name' => $validated['name'],
+            'surname' =>  $validated['surname'],
+            'photo' =>  $validated['photo'],
+            'age' =>  $validated['age'],
+            'gender' =>  $validated['gender'],
+            'atitude' =>  $validated['atitude'],
+        ]);
+        $kids->save();
+        return response()->json($kids, 200);
     }
 
     /**
@@ -81,5 +104,7 @@ class KidController extends Controller
     public function destroy(string $id)
     {
         //
+        $kids = Kid::find($id);
+        $kids->delete();
     }
 }
