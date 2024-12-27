@@ -31,12 +31,13 @@ class KidController extends Controller
     {
         //
         $kids = Kid::create([
-            'name' => $request,
-            'surname' => $request,
-            'foto' => $request,
-            'age' => $request,
-            'gender', 'boy', 'girl' => $request,
-            'atitude', 'good', 'bad' => $request,
+            'name' => $request->name,
+            'surname' => $request->surname,
+            'foto' => $request->foto,
+            'age' => $request->age,
+            'gender', 'boy', 'girl' => $request->gender,
+            'atitude', 'good', 'bad' => $request->atitude,
+            'country' => $request->country,
         ]);
 
         $kids->save();
