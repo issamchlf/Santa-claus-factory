@@ -33,7 +33,7 @@ class KidController extends Controller
         $kids = Kid::create([
             'name' => $request->name,
             'surname' => $request->surname,
-            'foto' => $request->foto,
+            'photo' => $request->photo,
             'age' => $request->age,
             'gender', 'boy', 'girl' => $request->gender,
             'atitude', 'good', 'bad' => $request->atitude,
@@ -68,7 +68,7 @@ class KidController extends Controller
         $kids->update([
             'name' => $request->name,
             'surname' => $request->surname,
-            'foto' => $request->foto,
+            'photo' => $request->photo,
             'age' => $request->age,
             'gender', 'boy', 'girl' => $request->gender,
             'atitude', 'good', 'bad' => $request->atitude,
