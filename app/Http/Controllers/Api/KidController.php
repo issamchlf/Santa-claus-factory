@@ -33,17 +33,19 @@ class KidController extends Controller
         $validated = $request->validate([
             'name' => 'string',
             'surname' => 'string',
-            'photo' => 'string',
+            'foto' => 'string',
             'age' => 'integer',
-            'gender' => 'string',
-            'atitude' => 'string'
+            'age_range' => 'enum',
+            'gender' => 'enum',
+            'atitude' => 'enum'
         ]);
         
         $kids = Kid::create([
             'name' => $validated['name'],
             'surname' =>  $validated['surname'],
-            'photo' =>  $validated['photo'],
+            'foto' =>  $validated['photo'],
             'age' =>  $validated['age'],
+            'age_range' => $validated['age_range'],
             'gender' =>  $validated['gender'],
             'atitude' =>  $validated['atitude'],
         ]);
@@ -80,17 +82,19 @@ class KidController extends Controller
         $validated = $request->validate([
             'name' => 'string',
             'surname' => 'string',
-            'photo' => 'string',
+            'foto' => 'string',
             'age' => 'integer',
-            'gender' => 'string',
-            'atitude' => 'string'
+            'age_range' => 'enum',
+            'gender' => 'enum',
+            'atitude' => 'enum'
         ]);
 
         $kids->update([
             'name' => $validated['name'],
             'surname' =>  $validated['surname'],
-            'photo' =>  $validated['photo'],
+            'foto' =>  $validated['photo'],
             'age' =>  $validated['age'],
+            'age_range' => $validated['age_range'],
             'gender' =>  $validated['gender'],
             'atitude' =>  $validated['atitude'],
         ]);
