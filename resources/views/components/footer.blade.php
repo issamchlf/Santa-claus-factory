@@ -3,37 +3,37 @@
     <div class="p-1 ">
         <div class="grid grid-cols-11 text-center">
             <div class="transform hover:scale-110 transition-transform duration-500">
-                <a href="">
+                <a href="https://github.com/issamchlf">
                     <p class="font-bold text-base">Issam</p>
                     <img src="/image/github.svg" alt="" class="w-10 h-10  mx-auto mt-1 rounded-full">
                 </a>
             </div>
             <div class="transform hover:scale-110 transition-transform duration-500">
-                <a href="https://github.com/Mangel111111111">
+                <a href="https://github.com/Crudo7">
                     <p class="font-bold text-base">Fran</p>
                     <img src="/image/github.svg" alt="" class="w-10 h-10  mx-auto mt-1 rounded-full">
                 </a>
             </div>
             <div class="transform hover:scale-110 transition-transform duration-500">
-                <a href="https://github.com/Kalixto73a">
+                <a href="https://github.com/Matias-Stadler">
                     <p class="font-bold text-base">Matias</p>
                     <img src="/image/github.svg" alt="" class="w-10 h-10  mx-auto mt-1 rounded-full">
                 </a>
             </div>
             <div class="transform hover:scale-110 transition-transform duration-500">
-                <a href="https://github.com/AntonioGuillen123">
+                <a href="https://github.com/Leonkeneddy86">
                     <p class="font-bold text-base">Jonathan</p>
                     <img src="/image/github.svg" alt="" class="w-10 h-10  mx-auto mt-1 rounded-full">
                 </a>
             </div>
             <div class="transform hover:scale-110 transition-transform duration-500">
-                <a href="https://github.com/Manusitox360">
+                <a href="https://github.com/soyJenifer">
                     <p class="font-bold text-base">Jeni</p>
                     <img src="/image/github.svg" alt="" class="w-10 h-10 mx-auto mt-1 rounded-full">
                 </a>
             </div>
             <div class="transform hover:scale-110 transition-transform duration-500">
-                <a href="https://github.com/Manusitox360">
+                <a href="https://github.com/mrene42">
                     <p class="font-bold text-base">Rene</p>
                     <img src="/image/github.svg" alt="" class="w-10 h-10 mx-auto mt-1 rounded-full">
                 </a>

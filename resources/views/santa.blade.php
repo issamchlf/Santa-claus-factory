@@ -20,19 +20,16 @@
         <tbody>
             @foreach ($kids as $kid)
               <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    {{$kids->id}}
-                    </th>
-                    <td class="px-6 py-4">{{$kids->id}}</td>
-                    <td class="px-6 py-4">{{$kids->name}}</td>
-                    <td class="px-6 py-4">{{$kids->surname}}</td>
-                    <td class="px-6 py-4">{{$kids->foto}}</td>
-                    <td class="px-6 py-4">{{$kids->age}}</td>
-                    <td class="px-6 py-4">{{$kids->gender}}</td>
-                    <td class="px-6 py-4">{{$kids->atitude}}</td>
-                    <td class="px-6 py-4">{{$kids->country}}</td>
+                    <td class="px-6 py-4">{{$kid->id}}</td>
+                    <td class="px-6 py-4">{{$kid->name}}</td>
+                    <td class="px-6 py-4">{{$kid->surname}}</td>
+                    <td class="px-6 py-4">{{$kid->foto}}</td>
+                    <td class="px-6 py-4">{{$kid->age}}</td>
+                    <td class="px-6 py-4">{{$kid->gender}}</td>
+                    <td class="px-6 py-4">{{$kid->atitude}}</td>
+                    <td class="px-6 py-4">{{$kid->country}}</td>
                     <td class="px-6 py-4 text-right">
-                    <a href="{{route('santashow', ['id' => $kids->id])}}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Show</a>
+                    <a href="{{route('apishow', ['id' => $kid->id])}}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Show</a>
                     </td>
                 </tr>  
             @endforeach  
