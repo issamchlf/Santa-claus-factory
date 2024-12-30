@@ -20,7 +20,7 @@ class KidController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    /*public function create()
     {
         //
     }
@@ -29,29 +29,29 @@ class KidController extends Controller
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-    {
-        $validated = $request->validate([
-            'name' => 'string',
-            'surname' => 'string',
-            'foto' => 'string',
-            'age' => 'integer',
-            'age_range' => 'enum',
-            'gender' => 'enum',
-            'atitude' => 'enum'
-        ]);
-        
-        $kids = Kid::create([
-            'name' => $validated['name'],
-            'surname' =>  $validated['surname'],
-            'foto' =>  $validated['photo'],
-            'age' =>  $validated['age'],
-            'age_range' => $validated['age_range'],
-            'gender' =>  $validated['gender'],
-            'atitude' =>  $validated['atitude'],
-        ]);
-        $kids->save();
-        return response()->json($kids, 200);
+{
+    $validated = $request->validate([
+        'name' => 'required|string',
+        'surname' => 'required|string',
+        'foto' => 'nullable|file|mimes:jpg,jpeg,png,gif|max:2048',
+        'age' => 'required|integer',
+        'age_range' => 'nullable|string',
+        'gender' => 'required|string',
+        'atitude' => 'required|string',
+        'country' => 'required|string',
+    ]);
+
+    if ($request->hasFile('foto')) {
+        // Store the file and get its URL
+        $path = $request->file('foto')->store('uploads', 'public');
+        $validated['foto'] = url("storage/{$path}");
     }
+
+    $kids = Kid::create($validated);
+
+    return response()->json($kids, 201); // Return created resource with 201 status code
+}
+
 
     /**
      * Display the specified resource.
@@ -66,7 +66,7 @@ class KidController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    /*public function edit(string $id)
     {
         //
     }
@@ -76,31 +76,34 @@ class KidController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
-        $kids = kid::find($id);
-
+        $kids = Kid::find($id);
+    
+        if (!$kids) {
+            return response()->json(['error' => 'Kid not found'], 404);
+        }
+    
         $validated = $request->validate([
-            'name' => 'string',
-            'surname' => 'string',
-            'foto' => 'string',
-            'age' => 'integer',
-            'age_range' => 'enum',
-            'gender' => 'enum',
-            'atitude' => 'enum'
+            'name' => 'sometimes|string',
+            'surname' => 'sometimes|string',
+            'foto' => 'nullable|file|mimes:jpg,jpeg,png,gif|max:2048',
+            'age' => 'sometimes|integer',
+            'age_range' => 'nullable|string',
+            'gender' => 'sometimes|string',
+            'atitude' => 'sometimes|string',
+            'country' => 'sometimes|string'
         ]);
-
-        $kids->update([
-            'name' => $validated['name'],
-            'surname' =>  $validated['surname'],
-            'foto' =>  $validated['photo'],
-            'age' =>  $validated['age'],
-            'age_range' => $validated['age_range'],
-            'gender' =>  $validated['gender'],
-            'atitude' =>  $validated['atitude'],
-        ]);
-        $kids->save();
+    
+        if ($request->hasFile('foto')) {
+            $validated['foto'] = $request->file('foto')->store('uploads', 'public');
+        }
+    
+        $kids->update(array_filter($validated));
+        
+    
         return response()->json($kids, 200);
     }
+    
+
 
     /**
      * Remove the specified resource from storage.
