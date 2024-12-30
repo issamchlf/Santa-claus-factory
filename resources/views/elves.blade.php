@@ -19,11 +19,13 @@
               <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                     <td class="px-6 py-4">{{$toy->id}}</td>
                     <td class="px-6 py-4">{{$toy->name}}</td>
-                    <td class="px-6 py-4">{{$toy->image}}</td>
+                    <td>
+                        <img src="{{ $toy->image }}" alt="Foto" style="width: 50px; height: 50px; object-fit: cover;">
+                    </td>
                     <td class="px-6 py-4">{{$toy->description}}</td>
                     <td class="px-6 py-4">{{$toy->minimum_age}}</td>
                     <td class="px-6 py-4 text-right">
-                    <a href="{{route('toyapishow', ["id" => $toy->id])}}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Show</a>
+                    <a href="{{route('elveShow', ["id" => $toy->id])}}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Show</a>
                     </td>
                 </tr>  
             @endforeach  

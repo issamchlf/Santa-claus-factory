@@ -12,4 +12,5 @@ Route::get('/elve', [ToyController::class, 'index'])->name('elve');
 Route::get('/santa', [KidController::class, 'index'])->name('santa');
 
 Route::get('/santa/{id}', [KidController::class, 'show'])->name('santaShow');
+Route::get('/elve/{id}', [ToyController::class, 'show'])->name('elveShow');
 

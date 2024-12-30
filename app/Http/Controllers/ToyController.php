@@ -36,10 +36,11 @@ class ToyController extends Controller
     /**
      * Display the specified resource.
      */
-    /* public function show(string $id)
+     public function show(string $id)
     {
-        //
-    } */
+        $toys = Toy::findOrFail($id);
+        return view('elveShow', compact('toys'));
+    } 
 
     /**
      * Show the form for editing the specified resource.

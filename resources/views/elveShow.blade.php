@@ -1,18 +1,32 @@
 @extends('layouts.app')
 @section('content')
-    <a href="{{route("home")}}">
-     <button class= "bottom-4 bg-sky-500/75">Back</button>
-    </a>
+    <div class="bg-gradient-to-br from-blue-200 via-purple-300 to-pink-200 min-h-screen relative">
 
-     <div id="toyShow" class=" max-w-sm rounded overflow-hidden shadow-lg">
-        <img class="w-full" src={{$toy->image}} alt="toy">
+        <div class="absolute top-4 left-4">
+            <a href="{{ route('elve') }}">
+                <button class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-2 px-4 rounded shadow-md">
+                    Back
+                </button>
+            </a>
+        </div>
 
-        <div class="font-bold text-xl mb-2">{{$toy->name}}</div>
-         <p class="text-gray-700 text-base">{{$toy->description}}</p>
+
+        <div class="flex items-center justify-center min-h-screen">
+            @if($toys)
+                <div id="toyShow" class="bg-white max-w-sm rounded-2xl overflow-hidden shadow-2xl transform transition duration-500 hover:scale-105">
+                    <img src="{{ $toys->image ?? asset('images/default-toy.png') }}" alt="Toy Image" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h2 class="font-bold text-2xl mb-2 text-purple-800">{{ $toys->name }}</h2>
+                        <p class="text-gray-700 text-base mb-4">{{ $toys->description }}</p>
+                        <div class="flex justify-between items-center">
+                            <span class="inline-block bg-blue-100 text-blue-800 font-semibold px-3 py-1 rounded-full text-sm">ID: {{ $toys->id }}</span>
+                            <span class="inline-block bg-pink-100 text-pink-800 font-semibold px-3 py-1 rounded-full text-sm">AGE: {{ $toys->minimum_age }}</span>
+                        </div>
+                    </div>
+                </div>
+            @else
+                <p class="text-center text-red-500 font-bold">Toy not found.</p>
+            @endif
         </div>
-        <div class="px-6 pt-4 pb-2">
-         <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">ID:{{$toy->id}}</span>
-         <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">AGE:{{$toy->minimum_age}}</span>
-        </div>
-    </div>   
+    </div>
 @endsection

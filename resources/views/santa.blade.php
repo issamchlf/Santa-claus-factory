@@ -23,7 +23,10 @@
                     <td class="px-6 py-4">{{$kid->id}}</td>
                     <td class="px-6 py-4">{{$kid->name}}</td>
                     <td class="px-6 py-4">{{$kid->surname}}</td>
-                    <td class="px-6 py-4">{{$kid->foto}}</td>
+                    <td>
+                        <img src="{{ $kid->foto }}" alt="Foto" style="width: 50px; height: 50px; object-fit: cover;">
+                    </td>
+                    
                     <td class="px-6 py-4">{{$kid->age}}</td>
                     <td class="px-6 py-4">{{$kid->gender}}</td>
                     <td class="px-6 py-4">{{$kid->atitude}}</td>
