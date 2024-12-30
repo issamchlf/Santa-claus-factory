@@ -8,8 +8,9 @@
                 <th scope="col" class="px-4 py-3">Name</th>
                 <th scope="col" class="px-4 py-3">Image</th>
                 <th scope="col" class="px-4 py-3">Description</th>
-                <th scope="col" class="px-4 py-3">Age</th>
-                    <span class="sr-only">More</span>
+                <th scope="col" class="px-4 py-3">minimum_age</th>
+                <th scope="col" class="px-4 py-3"></th>
+                    <span class="sr-only">show</span>
                 </th>
             </tr>
         </thead>

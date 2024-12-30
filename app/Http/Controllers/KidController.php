@@ -16,4 +16,9 @@ class KidController extends Controller
         return view('santa', compact('kids'));
     }
     
+    public function show(string $id)
+    {
+        $kids = Kid::findOrFail($id);
+        return view('santaShow', compact('kids'));
+    }
 }

@@ -29,7 +29,7 @@
                     <td class="px-6 py-4">{{$kid->atitude}}</td>
                     <td class="px-6 py-4">{{$kid->country}}</td>
                     <td class="px-6 py-4 text-right">
-                    <a href="{{route('apishow', ['id' => $kid->id])}}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Show</a>
+                    <a href="{{route('santaShow', ['id' => $kid->id])}}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Show</a>
                     </td>
                 </tr>  
             @endforeach  
