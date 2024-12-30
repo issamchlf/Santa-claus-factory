@@ -10,7 +10,6 @@
             </a>
         </div>
 
-
         <div class="flex items-center justify-center min-h-screen">
             @if($toys)
                 <div id="toyShow" class="bg-white max-w-sm rounded-2xl overflow-hidden shadow-2xl transform transition duration-500 hover:scale-105">
