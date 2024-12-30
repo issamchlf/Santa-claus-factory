@@ -19,13 +19,20 @@ class KidFactory extends Factory
         $countries = ["Spain", "Morocco", "United States", "France", "Mexico", "Japan", "Brazil", "India", "Canada", "Germany"];
         $gender = ['boy', 'girl'];
         $atitude = ['good', 'bad'];
-        $range = ['0-3', '3-7', '7-12', '12-16', '16-18', '18+'];
         return [
             'name' => $this->faker->firstName(),
             'surname' => $this->faker->lastName(),
             'foto' => $this->faker->imageUrl(),
             'age' => $this->faker->numberBetween(1, 20),
-            'age range' => $this->faker->randomElement($range),
+            'age_range' => function (array $attributes) {
+                $age = $attributes['age'];
+                if ($age <= 3) return '0-3';
+                if ($age <= 7) return '3-7';
+                if ($age <= 12) return '7-12';
+                if ($age <= 16) return '12-16';
+                if ($age <= 18) return '16-18';
+                return '18+';
+            },
             'gender' => $this->faker->randomElement($gender),
             'country' => $this->faker->randomElement($countries),
             'atitude' => $this->faker->randomElement($atitude),

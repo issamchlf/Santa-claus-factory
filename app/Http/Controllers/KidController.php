@@ -31,16 +31,14 @@ class KidController extends Controller
     {
         //
         $kids = Kid::create([
-            'name' => $request,
-            'surname' => $request,
-            'foto' => $request,
-            'age' => $request,
-            'gender', 'boy', 'girl' => $request,
-            'atitude', 'good', 'bad' => $request,
+            'name' => $request->name,
+            'surname' => $request->surname,
+            'photo' => $request->photo,
+            'age' => $request->age,
+            'gender', 'boy', 'girl' => $request->gender,
+            'atitude', 'good', 'bad' => $request->atitude,
+            'country' => $request->country,
         ]);
-
-        $kids->save();
-        return response()->json($kids, 200);
     }
 
     /**
@@ -65,6 +63,19 @@ class KidController extends Controller
     public function update(Request $request, string $id)
     {
         //
+        $kids = Kid::find($id);
+
+        $kids->update([
+            'name' => $request->name,
+            'surname' => $request->surname,
+            'photo' => $request->photo,
+            'age' => $request->age,
+            'gender', 'boy', 'girl' => $request->gender,
+            'atitude', 'good', 'bad' => $request->atitude,
+            'country' => $request->country,
+        ]);
+        $kids->save();
+        return response()->json($kids, 200);
     }
 
     /**
@@ -73,5 +84,7 @@ class KidController extends Controller
     public function destroy(string $id)
     {
         //
+        $kids = Kid::find($id);
+        $kids->delete();
     }
 }

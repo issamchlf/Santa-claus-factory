@@ -33,22 +33,24 @@ class KidController extends Controller
         $validated = $request->validate([
             'name' => 'string',
             'surname' => 'string',
-            'photo' => 'string',
+            'foto' => 'string',
             'age' => 'integer',
-            'gender' => 'string',
-            'atitude' => 'string'
+            'age_range' => 'enum',
+            'gender' => 'enum',
+            'atitude' => 'enum'
         ]);
         
         $kids = Kid::create([
             'name' => $validated['name'],
             'surname' =>  $validated['surname'],
-            'photo' =>  $validated['photo'],
+            'foto' =>  $validated['photo'],
             'age' =>  $validated['age'],
+            'age_range' => $validated['age_range'],
             'gender' =>  $validated['gender'],
             'atitude' =>  $validated['atitude'],
         ]);
         $kids->save();
-        return response()->json($kids, 201);
+        return response()->json($kids, 200);
     }
 
     /**
@@ -57,6 +59,8 @@ class KidController extends Controller
     public function show(string $id)
     {
         //
+        $kids = Kid::find($id);
+        return response()->json($kids, 200);
     }
 
     /**
@@ -73,6 +77,29 @@ class KidController extends Controller
     public function update(Request $request, string $id)
     {
         //
+        $kids = kid::find($id);
+
+        $validated = $request->validate([
+            'name' => 'string',
+            'surname' => 'string',
+            'foto' => 'string',
+            'age' => 'integer',
+            'age_range' => 'enum',
+            'gender' => 'enum',
+            'atitude' => 'enum'
+        ]);
+
+        $kids->update([
+            'name' => $validated['name'],
+            'surname' =>  $validated['surname'],
+            'foto' =>  $validated['photo'],
+            'age' =>  $validated['age'],
+            'age_range' => $validated['age_range'],
+            'gender' =>  $validated['gender'],
+            'atitude' =>  $validated['atitude'],
+        ]);
+        $kids->save();
+        return response()->json($kids, 200);
     }
 
     /**
@@ -81,5 +108,7 @@ class KidController extends Controller
     public function destroy(string $id)
     {
         //
+        $kids = Kid::find($id);
+        $kids->delete();
     }
 }
