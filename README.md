@@ -214,3 +214,18 @@ This API allows you to manage toy entries and provides CRUD (Create, Read, Updat
 - **Rene Barco:** [![GitHub](https://img.shields.io/badge/GitHub-Perfil-black?style=flat-square&logo=github)](https://github.com/mrene42)
 [![Correo](https://img.shields.io/badge/Email-Contacto-red?style=flat-square&logo=gmail)](mailto:mariarenebarco.969@gmail.com)
 
+- **Álvaro Cervera Vigara:** [![GitHub](https://img.shields.io/badge/GitHub-Perfil-black?style=flat-square&logo=github)](https://github.com/Kalixto73a)
+
+
+- **Miguel Ángel García López:** [![GitHub](https://img.shields.io/badge/GitHub-Perfil-black?style=flat-square&logo=github)](https://github.com/Mangel111111111)
+
+
+- **Manuel:** [![GitHub](https://img.shields.io/badge/GitHub-Perfil-black?style=flat-square&logo=github)](https://github.com/Manusitox360)
+
+
+- **Antonio Guillén:** [![GitHub](https://img.shields.io/badge/GitHub-Perfil-black?style=flat-square&logo=github)](https://github.com/AntonioGuillen123)
+
+
+- **Santino:** [![GitHub](https://img.shields.io/badge/GitHub-Perfil-black?style=flat-square&logo=github)](https://github.com/SantiVigna)
+
+
