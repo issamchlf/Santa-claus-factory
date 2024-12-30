@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    <div class="bg-gradient-to-br from-blue-200 via-purple-300 to-pink-200 min-h-screen relative">
+    <div class="bg-gradient-to-br from-blue-900 via-red-800 to-red-950 min-h-screen relative">
 
         <div class="absolute top-4 left-4">
             <a href="{{ route('elve') }}">
