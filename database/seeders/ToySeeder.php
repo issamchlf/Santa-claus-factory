@@ -144,6 +144,12 @@ class ToySeeder extends Seeder
                     'description' => "Series like Harry Potter, Percy Jackson, or graphic novels.",
                     'image' => "https://res.cloudinary.com/dq2kswexq/image/upload/v1734336150/ChristmasToyFactory/YouthBooks.jpg",
                     'minimum_age_id' => 3
+                ],
+                [
+                    'name' => "white coal",
+                    'description' => "Series like Harry Potter, Percy Jackson, or graphic novels.",
+                    'image' => "https://res.cloudinary.com/dq2kswexq/image/upload/v1734336150/ChristmasToyFactory/YouthBooks.jpg",
+                    'minimum_age_id' => 3
                 ]
             ];
 

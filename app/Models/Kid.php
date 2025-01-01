@@ -21,8 +21,8 @@ class Kid extends Model
         'atitude',
     ];
 
-    public function Toy()
+    public function Toys()
     {
-        return $this->hasMany(Toy::class)->withTimestamps();
+        return $this->belongsToMany(Toy::class)->withTimestamps();
     }
 }

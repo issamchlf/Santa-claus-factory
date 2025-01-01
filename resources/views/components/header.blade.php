@@ -16,7 +16,7 @@
             <p class="font-bold">Santa Claus</p>
             </button> 
         </a>
-        <a href="{{route('santa')}}">
+        <a href="{{route('gift')}}">
             <button type="button" class="flex text-[1.3rem] gap-2 focus:outline-none text-white bg-amber-600 duration-1000 hover:bg-amber-700 hover:scale-110 transition-transform font-medium rounded-lg text-sm px-3 py-2.5 me-2 mb-2">
             <p>🎁</p>
             <p class="font-bold">Gifts</p>
