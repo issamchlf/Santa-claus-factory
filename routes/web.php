@@ -1,16 +1,22 @@
 <?php
 
-use App\Http\Controllers\Controller;
+use App\Models\Toy;
+use App\Models\MinimumAge;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\KidController;
 use App\Http\Controllers\ToyController;
+use App\Models\Kid;  
 
 Route::get('/', function () {
-    return view('home');
+    $toys = Toy::with('minimumAge')->get(); 
+    $ageRanges = MinimumAge::all(); // bring all age ranges
+
+    $goodKids = Kid::where('atitude', 'good')->count();  
+    $badKids = Kid::where('atitude', 'bad')->count();    
+
+    return view('home', compact('toys', 'ageRanges', 'goodKids', 'badKids'));
 })->name('home');
-Route::get('/gift', function () {
-    return view('gift');
-})->name('gift');
+
 
 Route::get('/elve', [ToyController::class, 'index'])->name('elve');
 Route::get('/santa', [KidController::class, 'index'])->name('santa');

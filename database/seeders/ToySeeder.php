@@ -146,9 +146,21 @@ class ToySeeder extends Seeder
                     'minimum_age_id' => 3
                 ],
                 [
-                    'name' => "white coal",
-                    'description' => "Series like Harry Potter, Percy Jackson, or graphic novels.",
-                    'image' => "https://res.cloudinary.com/dq2kswexq/image/upload/v1734336150/ChristmasToyFactory/YouthBooks.jpg",
+                    'name' => "Mineral Charcoal",
+                    'description' => "Toy made by mineral coal for naughty Kids.",
+                    'image' => "https://res.cloudinary.com/dkork1d8t/image/upload/v1735777056/image_4_dqgoki.webp",
+                    'minimum_age_id' => 3
+                ],
+                [
+                    'name' => "Vegetal Charcoal",
+                    'description' => "Bear made by Vegetal coal for naughty Kids.",
+                    'image' => "https://res.cloudinary.com/dkork1d8t/image/upload/v1735777057/image_3_ydjder.webp",
+                    'minimum_age_id' => 3
+                ],
+                [
+                    'name' => "Mystery Charcoal",
+                    'description' => "toy made by coal for naughty Kids.",
+                    'image' => "https://res.cloudinary.com/dkork1d8t/image/upload/v1735778083/69e824c0bd9c4ca6beafe2799fc213b2_lbxxc9.jpg",
                     'minimum_age_id' => 3
                 ]
             ];
