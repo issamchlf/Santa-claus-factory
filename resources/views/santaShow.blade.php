@@ -33,7 +33,7 @@
                         <p class="font-serif text-md leading-tight text-gray-700 text-base mb-4">AGE: {{ $kids->age }}
                         </p>
                         <p class="font-serif text-md leading-tight text-gray-700 text-base mb-4">ATTITUDE:
-                            {{ $kids->atitude ? 'Good' : 'Bad' }}</p>
+                            {{ $kids->atitude }}</p>
                         <p class="font-serif text-md leading-tight text-gray-700 text-base mb-4">COUNTRY:
                             {{ $kids->country }}</p>
                     </div>
