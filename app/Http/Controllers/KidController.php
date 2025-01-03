@@ -58,8 +58,8 @@ class KidController extends Controller
 
     public function show(string $id)
     {
-        $kid = Kid::findOrFail($id); 
-        return view('santaShow', compact('kid')); 
+        $kids = Kid::findOrFail($id); 
+        return view('santaShow', compact('kids')); 
     }
 
     
