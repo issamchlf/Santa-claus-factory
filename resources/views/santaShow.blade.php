@@ -33,7 +33,7 @@
                             {{ $kids->surname }}</h3>
                         <p class="font-serif text-md leading-tight text-gray-700 text-base mb-4">AGE: {{ $kids->age }}
                         </p>
-                        <p class="font-serif text-md leading-tight text-gray-700 text-base mb-4">ATTITUDE:
+                        <p class="font-serif text-md leading-tight text-gray-700 text-base mb-4">ATITUDE:
                             {{ $kids->atitude }}</p>
                         <p class="font-serif text-md leading-tight text-gray-700 text-base mb-4">COUNTRY:
                             {{ $kids->country }}</p>
