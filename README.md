@@ -22,7 +22,8 @@ Below is a diagram of the database, showing different relationships between tabl
 
 - **toy - minimum_age:** One to many relationship. A minimum age can have many toys, but each toy belongs to only one minimum age.
 
-![image](https://res.cloudinary.com/dierpqujk/image/upload/v1734101541/imagen_2024-12-13_155219091_p0kr3s.png)
+
+![image](https://github.com/user-attachments/assets/8efe1800-92bb-4b35-965e-fb417d2e14c0)
 
 
 ## 🔧⚙️ Installation
