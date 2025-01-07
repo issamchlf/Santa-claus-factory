@@ -16,7 +16,7 @@
                 <button type="button"
                     class="flex text-[1.3rem] gap-2 focus:outline-none text-white bg-green-600 duration-1000 hover:bg-green-700 hover:scale-110 transition-transform font-medium rounded-lg text-sm px-[.8rem] py-2.5 me-2 mb-2">
                     <p>🧝🏻</p>
-                    <p class="font-bold">Elfes</p>
+                    <p class="font-bold">Elves</p>
                 </button>
             </a>
             <a href="{{ route('santa') }}">
