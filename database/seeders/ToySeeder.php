@@ -167,19 +167,19 @@ class ToySeeder extends Seeder
                     'name' => "Travel to the Moon",
                     'description' => "Travel to the moon for +18 Kids.",
                     'image' => "https://res.cloudinary.com/dkork1d8t/image/upload/v1735854594/7a247dca9b3c49247353895c7176ab02_ckufod.jpg",
-                    'minimum_age_id' => 3
+                    'minimum_age_id' => 6
                 ],
                 [
                     'name' => "Travel to Warner",
                     'description' => "Travel to warner park for +18 Kids.",
                     'image' => "https://res.cloudinary.com/dkork1d8t/image/upload/v1735854587/parque-warner_kpoank.jpg",
-                    'minimum_age_id' => 3
+                    'minimum_age_id' => 6
                 ],
                 [
                     'name' => "Travel to Disneyland",
                     'description' => "Travel for disney land for +18 Kids.",
                     'image' => "https://res.cloudinary.com/dkork1d8t/image/upload/v1735854602/https___prod.static9_m90qhj.jpg",
-                    'minimum_age_id' => 3
+                    'minimum_age_id' => 6
                 ],
 
             ];
