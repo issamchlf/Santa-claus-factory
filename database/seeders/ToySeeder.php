@@ -69,7 +69,7 @@ class ToySeeder extends Seeder
                     'name' => "Educational Board Game",
                     'description' => "Monopoly Junior for learning through play.",
                     'image' => "https://res.cloudinary.com/dq2kswexq/image/upload/v1734336150/ChristmasToyFactory/EducationalBoardGame.jpg",
-                    'minimum_age_id' => 2
+                    'minimum_age_id' => 1
                 ],
                 [
                     'name' => "Experiment Kit",
@@ -81,7 +81,7 @@ class ToySeeder extends Seeder
                     'name' => "100-300 Piece Puzzles",
                     'description' => "Puzzles that stimulate logic and concentration.",
                     'image' => "https://res.cloudinary.com/dq2kswexq/image/upload/v1734336150/ChristmasToyFactory/Puzzles.jpg",
-                    'minimum_age_id' => 2
+                    'minimum_age_id' => 3
                 ],
                 [
                     'name' => "Drawing and Craft Materials",
@@ -93,13 +93,13 @@ class ToySeeder extends Seeder
                     'name' => "Bicycle",
                     'description' => "Vehicle to develop balance and physical activity.",
                     'image' => "https://res.cloudinary.com/dq2kswexq/image/upload/v1734336150/ChristmasToyFactory/Bicycle.jpg",
-                    'minimum_age_id' => 2
+                    'minimum_age_id' => 5
                 ],
                 [
                     'name' => "Basic Tech Toys",
                     'description' => "Simple programmable robots or small drones.",
                     'image' => "https://res.cloudinary.com/dq2kswexq/image/upload/v1734336150/ChristmasToyFactory/BasicTechToys.jpg",
-                    'minimum_age_id' => 2
+                    'minimum_age_id' => 3
                 ],
 
                 // Toys for ages 12 and up
@@ -107,13 +107,13 @@ class ToySeeder extends Seeder
                     'name' => "Camera Drone",
                     'description' => "Advanced drone with remote control and integrated camera.",
                     'image' => "https://res.cloudinary.com/dq2kswexq/image/upload/v1734336150/ChristmasToyFactory/CameraDrone.jpg",
-                    'minimum_age_id' => 3
+                    'minimum_age_id' => 5
                 ],
                 [
                     'name' => "Strategy Game",
                     'description' => "Board game like Catan to develop strategic skills.",
                     'image' => "https://res.cloudinary.com/dq2kswexq/image/upload/v1734336150/ChristmasToyFactory/StrategyGame.jpg",
-                    'minimum_age_id' => 3
+                    'minimum_age_id' => 2
                 ],
                 [
                     'name' => "Robotics Kit",
@@ -131,19 +131,19 @@ class ToySeeder extends Seeder
                     'name' => "Basic Musical Instruments",
                     'description' => "Guitars, keyboards, or electric drums for beginners.",
                     'image' => "https://res.cloudinary.com/dq2kswexq/image/upload/v1734336150/ChristmasToyFactory/BasicMusicalInstruments.jpg",
-                    'minimum_age_id' => 3
+                    'minimum_age_id' => 4
                 ],
                 [
                     'name' => "Sports Games",
                     'description' => "Balls, rackets, or accessories for specific sports.",
                     'image' => "https://res.cloudinary.com/dq2kswexq/image/upload/v1734336150/ChristmasToyFactory/SportsGames.jpg",
-                    'minimum_age_id' => 3
+                    'minimum_age_id' => 5
                 ],
                 [
                     'name' => "Youth Books",
                     'description' => "Series like Harry Potter, Percy Jackson, or graphic novels.",
                     'image' => "https://res.cloudinary.com/dq2kswexq/image/upload/v1734336150/ChristmasToyFactory/YouthBooks.jpg",
-                    'minimum_age_id' => 3
+                    'minimum_age_id' => 5
                 ],
                 [
                     'name' => "Mineral Charcoal",

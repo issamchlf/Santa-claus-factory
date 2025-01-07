@@ -16,8 +16,9 @@
                 <div id="toyShow"
                     class="bg-white max-w-sm rounded-2xl overflow-hidden shadow-2xl transform transition duration-500 hover:scale-105">
 
-                    <img src="{{ $kids->foto ?? asset('images/default-kid.png') }}" alt="Kid Image"
-                        class="w-full h-64 object-cover">
+                    <img src="{{ $kids->foto ?? asset('images/default-kid.png') }}" 
+                    alt="Kid Image"
+                    class="w-full h-64 object-cover object-top">               
                     <div class="p-6">
                         <div class="flex justify-between items-center">
                             <span
