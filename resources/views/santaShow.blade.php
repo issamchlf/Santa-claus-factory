@@ -13,8 +13,8 @@
 
         <div class="flex items-center justify-center min-h-screen">
             @if ($kids)
-                <div id="toyShow"
-                    class="bg-white max-w-sm rounded-2xl overflow-hidden shadow-2xl transform transition duration-500 hover:scale-105">
+                <div id="kidShow"
+                    class="bg-white max-w-sm rounded-2xl overflow-hidden shadow-2xl transform transition duration-500 hover:scale-105 m-8">
 
                     <img src="{{ $kids->foto ?? asset('images/default-kid.png') }}" 
                     alt="Kid Image"
@@ -31,14 +31,15 @@
                             {{ $kids->name }}</h2>
                         <h3 class="font-serif text-md leading-tight font-bold text-2xl mb-2 text-purple-800">
                             {{ $kids->surname }}</h3>
-                        <p class="font-serif text-md leading-tight text-gray-700 text-base mb-4">AGE: {{ $kids->age }}
+                        <p class="font-serif text-md leading-tight text-gray-700 text-base mb-4">{{ $kids->age }} Years
                         </p>
-                        <p class="font-serif text-md leading-tight text-gray-700 text-base mb-4">ATTITUDE:
-                            {{ $kids->atitude }}</p>
-                        <p class="font-serif text-md leading-tight text-gray-700 text-base mb-4">COUNTRY:
+                        <p class="font-serif text-md leading-tight text-gray-700 text-base mb-4">
                             {{ $kids->country }}</p>
+                        <span 
+                            class="font-serif text-md font-bold font-semibold {{ $kids->atitude == 'good' ? 'text-green-500' : 'text-red-700' }}">
+                            {{ $kids->atitude }}
+                        </span>
                     </div>
-
 
                     <div class="p-6 border-t border-gray-200">
                         <h3 class="font-serif text-md leading-tight font-bold text-xl mb-4 text-gray-700">Assigned Toys:
