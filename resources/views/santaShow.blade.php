@@ -2,7 +2,6 @@
 @section('content')
 
     <div class="bg-gradient-to-br from-blue-900 via-red-800 to-red-950 min-h-screen relative">
-
         <div class="absolute top-4 left-4">
             <a href="{{ route('santa') }}">
                 <button class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-2 px-4 rounded shadow-md">
@@ -15,7 +14,6 @@
             @if ($kids)
                 <div id="kidShow"
                     class="bg-white max-w-sm rounded-2xl overflow-hidden shadow-2xl transform transition duration-500 hover:scale-105 m-8">
-
                     <img src="{{ $kids->foto ?? asset('images/default-kid.png') }}" 
                     alt="Kid Image"
                     class="w-full h-64 object-cover object-top">               
@@ -28,19 +26,22 @@
                                 class="font-serif text-md leading-tight inline-block bg-pink-100 text-pink-800 font-semibold px-3 py-1 rounded-full text-sm">{{ $kids->gender }}</span>
                         </div>
                         <h2 class="font-serif text-md leading-tight font-bold text-2xl mb-2 text-purple-800">
-                            {{ $kids->name }}</h2>
+                            {{ $kids->name }} {{ $kids->surname }}</h2>
                         <h3 class="font-serif text-md leading-tight font-bold text-2xl mb-2 text-purple-800">
-                            {{ $kids->surname }}</h3>
-                        <p class="font-serif text-md leading-tight text-gray-700 text-base mb-4">{{ $kids->age }} Years
-                        </p>
-                        <p class="font-serif text-md leading-tight text-gray-700 text-base mb-4">
+                            </h3>
+                        <div class="px-6 py-2 flex justify-between items-center">
+                            <p class="font-serif text-md leading-tight text-gray-700 text-base mb-4">{{ $kids->age }} Years
+                            </p>
+                            <p class="text-purple-800 mb-4">|</p>
+                            <p class="font-serif text-md leading-tight text-gray-700 text-base mb-4">
                             {{ $kids->country }}</p>
-                        <span 
-                            class="font-serif text-md font-bold font-semibold {{ $kids->atitude == 'good' ? 'text-green-500' : 'text-red-700' }}">
+                            <p class="text-purple-800 mb-4">|</p>
+                            <span 
+                            class="font-serif text-md leading-tight text-base mb-4 font-serif text-md font-bold font-semibold {{ $kids->atitude == 'good' ? 'text-green-500' : 'text-red-700' }}">
                             {{ $kids->atitude }}
-                        </span>
+                            </span>
+                        </div>
                     </div>
-
                     <div class="p-6 border-t border-gray-200">
                         <h3 class="font-serif text-md leading-tight font-bold text-xl mb-4 text-gray-700">Assigned Toys:
                         </h3>
@@ -69,6 +70,7 @@
                 <p class="font-serif text-md leading-tight text-center text-red-500 font-bold">Kid not found.</p>
             @endif
         </div>
+        
     </div>
 
 @endsection
