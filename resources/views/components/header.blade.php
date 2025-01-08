@@ -1,5 +1,5 @@
 <header class="bg-cover bg-top bg-no-repeat bg-center"
-    style="background-image: url(https://media.istockphoto.com/id/613792084/es/foto/elegante-%C3%A1rbol-de-navidad-con-estrellas.jpg?s=1024x1024&w=is&k=20&c=zyWE5NCfidguc0fj29b2gruwpaweKGKEgT1JR9c3aV0=)">
+    style="background-image: url(https://img.freepik.com/vector-gratis/borde-copo-nieve-realista_23-2149230658.jpg?t=st=1736339145~exp=1736342745~hmac=8b0a689992936436574afb8a916d4ba920cf902a7502a6feff26a38c1acb14a1&w=826)">
     <div>
         <div class="text-center text-5xl p-2 pb-4 font-christmas font-bold text-sky-50">
             Christmas Toy Factory

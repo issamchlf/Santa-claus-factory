@@ -1,5 +1,5 @@
 <footer class="bg-cover bg-no-repeat bg-center text-white"
-    style="background-image: url(https://media.istockphoto.com/id/613792084/es/foto/elegante-%C3%A1rbol-de-navidad-con-estrellas.jpg?s=1024x1024&w=is&k=20&c=zyWE5NCfidguc0fj29b2gruwpaweKGKEgT1JR9c3aV0=)">
+    style="background-image: url(https://cdn.pixabay.com/photo/2016/03/31/18/03/christmas-1294090_1280.png)">
     <div class="bg-black bg-opacity-50 p-6 relative">
         <div class="absolute inset-x-0 top-0 text-white-500">
             <marquee class="py-1 font-bold text-md" behavior="scroll" direction="left">
@@ -24,7 +24,7 @@
                     @endforeach
                 </div>
             </div>
-            
+
             <div class="hidden md:block">
                 <div class="w-full flex justify-center items-center">
                     <p class="text-2xl font-christmas text-center  text-white-400 mx-4">Merry Christmas</p>                </div>

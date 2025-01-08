@@ -10,7 +10,7 @@
                             Id</th>
                         <th class="border-b-2 border-red-800 px-6 py-4 text-left text-xs font-bold uppercase tracking-wider">
                             Name</th>
-                        <th class="border-b-2 border-red-800 px-6 py-4 text-left text-xs font-bold uppercase tracking-wider">
+                        <th class="border-b-2 border-red-800 px-6 py-4 text-left text-xs font-bold uppercase tracking-wider flex justify-around">
                             Image</th>
                         <th class="border-b-2 border-red-800 px-6 py-4 text-left text-xs font-bold uppercase tracking-wider">
                             Description</th>
@@ -29,7 +29,7 @@
                                 {{ $toy->id }}</td>
                             <td class="font-serif text-md leading-tight border-dashed text-black border-red-300 px-6 py-4">
                                 {{ $toy->name }}</td>
-                            <td class="font-serif text-md leading-tight border-dashed border-red-300 px-6 py-4">
+                            <td class="font-serif text-md leading-tight border-dashed border-red-300 px-6 py-4 flex justify-center">
                                 <img src="{{ $toy->image }}" alt="Foto"
                                     class="w-15 h-20 object-cover rounded-full shadow-md shadow-red-700 border-red">
                             </td>
