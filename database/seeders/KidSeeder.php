@@ -132,7 +132,7 @@ class KidSeeder extends Seeder
                 'foto' => "https://res.cloudinary.com/dkork1d8t/image/upload/v1736242913/3g2ZbuSIOrgdfLlHuWzO--_dnG_s2blw2.webp",
                 'age' => 23,
                 'gender' => "girl",
-                'atitude' => "bad",
+                'atitude' => "good",
                 'country' => "Morocco",
             ],
 
