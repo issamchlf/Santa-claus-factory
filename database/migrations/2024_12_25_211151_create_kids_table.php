@@ -17,7 +17,6 @@ return new class extends Migration
             $table->string('surname');
             $table->string('foto');          
             $table->integer('age');
-            $table->enum('age_range', ['0-3', '3-7', '7-12', '12-16', '16-18', '18+']);
             $table->enum('gender', ['boy', 'girl']);
             $table->enum('atitude', ['good', 'bad']);
             $table->string('country');

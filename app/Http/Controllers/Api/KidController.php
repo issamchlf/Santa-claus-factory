@@ -35,7 +35,6 @@ class KidController extends Controller
         'surname' => 'required|string',
         'foto' => 'nullable|file|mimes:jpg,jpeg,png,gif|max:2048',
         'age' => 'required|integer',
-        'age_range' => 'nullable|string',
         'gender' => 'required|string',
         'atitude' => 'required|string',
         'country' => 'required|string',
@@ -87,7 +86,6 @@ class KidController extends Controller
             'surname' => 'sometimes|string',
             'foto' => 'nullable|file|mimes:jpg,jpeg,png,gif|max:2048',
             'age' => 'sometimes|integer',
-            'age_range' => 'nullable|string',
             'gender' => 'sometimes|string',
             'atitude' => 'sometimes|string',
             'country' => 'sometimes|string'
