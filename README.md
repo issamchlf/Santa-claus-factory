@@ -6,9 +6,25 @@ The application includes an intuitive and functional interface as well as an API
 
 With this system, Santa Claus will be able to ensure that each child receives the perfect gift, thus ensuring a magical Christmas.
 - **Index View**:
-![image](https://github.com/user-attachments/assets/452a0d8f-9418-49a8-9c72-1269b1f80a59)
+
+![Home](https://github.com/user-attachments/assets/6a0c0bf3-a662-4a73-a286-008151d171a5)
+
+- **Table Santa View**:
+
+![Santa](https://github.com/user-attachments/assets/86c4f55c-f74a-4bd2-bb77-4cfda4c71fef)
 
 
+- **Table Elves View**:
+
+![Elves](https://github.com/user-attachments/assets/52da31d1-99d1-4966-b3dc-238274e63d16)
+
+- **Show Kid**:
+
+  ![Show_Kid](https://github.com/user-attachments/assets/0e94838b-4059-457d-9723-dbfa912f790d)
+
+- **Show toy**:
+  
+  ![Show_Toy](https://github.com/user-attachments/assets/4212c18b-8a81-4411-b04c-c45200f57d1a)
 
 ## 🛠️🚀 Tech Stack
 - **Languages:** Html, Blade
@@ -22,9 +38,7 @@ Below is a diagram of the database, showing different relationships between tabl
 
 - **toy - minimum_age:** One to many relationship. A minimum age can have many toys, but each toy belongs to only one minimum age.
 
-
-![image](https://github.com/user-attachments/assets/8efe1800-92bb-4b35-965e-fb417d2e14c0)
-
+![image](https://github.com/user-attachments/assets/3adab154-2293-4162-9030-2d0f41e70002)
 
 ## 🔧⚙️ Installation
 - Clone repository
@@ -51,7 +65,7 @@ In DB_CONNECTION will come mysqlite, change it to the bd you use (in this case M
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=chrismas_toy_factory
+DB_DATABASE=christmas_toy_factory
 DB_USERNAME=root
 DB_PASSWORD=
 ```
@@ -62,10 +76,10 @@ php artisan key:generate
 
 - Execute migrations
 ```
-php artisan migrate
+php artisan migrate:fresh
 ```
-
 ## ▶️💻 Run Locally
+
 - How to run the Laravel server
 ```
 php artisan serve
@@ -106,7 +120,7 @@ A folder called coverage-report will also have been generated with **86.05%** co
 
 This API allows you to manage toy entries and provides CRUD (Create, Read, Update, Delete) operations for these.
 
-### Toy
+###  Api Toy
 
 #### 1 Get all toy entries
 
@@ -188,6 +202,89 @@ This API allows you to manage toy entries and provides CRUD (Create, Read, Updat
 - **Status Code:** 204, 404
 - **Content Type:** No-Content, application/json
 
+- ### Api Santa
+
+#### 1 Get all toy entries
+
+```http
+  GET /api/santa
+```
+
+#### Response:
+- **Status Code:** 200
+- **Content Type:** application/json
+
+#### 2 Get a santa by ID
+
+```http
+  GET /api/santa/id
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `id`      | `string` | **Required**. Santa ID     |
+
+#### Response:
+- **Status Code:** 200, 404
+- **Content Type:** application/json
+
+#### 3 Create a new santa
+
+```http
+  POST /api/santa
+```
+
+#### Response:
+- **Status Code:** 201
+- **Content Type:** application/json
+
+#### Body:
+
+| Parameter | Type     | Description                    |
+| :-------- | :------- | :-------------------------     |
+| `name`    | `string` | **Required**. Name of toy    |
+| `image` | `string` | **Required**. Company of toy |
+| `description` | `string` | **Required**. Status of toy  |
+| `minimum_age_id` | `string` | **Required**. Id of the minimum age of the toy  |
+
+#### 4 Update an existing toy by ID
+
+```http
+  PUT /api/santa/id
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `id`      | `string` | **Required**. Santa ID     |
+
+#### Response:
+- **Status Code:** 201, 404
+- **Content Type:** application/json
+
+#### Body:
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `name`    | `string` | Name of toy    |
+| `image` | `string` | Company of toy |
+| `description` | `string` | Status of toy  |
+| `minimum_age_id` | `string` | Id of the minimum age of the toy  |
+
+#### 5 Delete a toy by ID
+
+```http
+  DELETE /api/santa/id
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `id`      | `string` | **Required**. Santa ID     |
+
+#### Response:
+- **Status Code:** 204, 404
+- **Content Type:** No-Content, application/json
+
+
 
 ## ✍️🙍 Authors
 
@@ -211,3 +308,17 @@ This API allows you to manage toy entries and provides CRUD (Create, Read, Updat
 
 - **Rene Barco:** [![GitHub](https://img.shields.io/badge/GitHub-Perfil-black?style=flat-square&logo=github)](https://github.com/mrene42)
 [![Correo](https://img.shields.io/badge/Email-Contacto-red?style=flat-square&logo=gmail)](mailto:mariarenebarco.969@gmail.com)
+
+- **Álvaro Cervera Vigara:** [![GitHub](https://img.shields.io/badge/GitHub-Perfil-black?style=flat-square&logo=github)](https://github.com/Kalixto73a)
+
+
+- **Miguel Ángel García López:** [![GitHub](https://img.shields.io/badge/GitHub-Perfil-black?style=flat-square&logo=github)](https://github.com/Mangel111111111)
+
+
+- **Manuel Espinosa:** [![GitHub](https://img.shields.io/badge/GitHub-Perfil-black?style=flat-square&logo=github)](https://github.com/Manusitox360)
+
+
+- **Antonio Guillén:** [![GitHub](https://img.shields.io/badge/GitHub-Perfil-black?style=flat-square&logo=github)](https://github.com/AntonioGuillen123)
+
+
+- **Santino Vigna:** [![GitHub](https://img.shields.io/badge/GitHub-Perfil-black?style=flat-square&logo=github)](https://github.com/SantiVigna)
