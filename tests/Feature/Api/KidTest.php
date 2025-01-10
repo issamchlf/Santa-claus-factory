@@ -19,7 +19,6 @@ class KidTest extends TestCase
 
         $response->assertStatus(200)
         ->assertJsonCount(1);
-        ;
     }
     
     public function test_CheckIfReceiveOnlyOneEntryOfToyInJsonFile()
