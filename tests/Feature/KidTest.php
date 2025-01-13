@@ -4,7 +4,6 @@ namespace Tests\Feature;
 
 use App\Models\Kid;
 use Tests\TestCase;
-use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class KidTest extends TestCase
