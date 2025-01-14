@@ -113,8 +113,9 @@ If everything is correct, everything should be OK.
 ![image](https://github.com/user-attachments/assets/11cf1200-71ff-4dab-a449-fbdc15188eb2)
 
 
-A folder called coverage-report will also have been generated with **86.05%** coverage.
-![image](https://github.com/user-attachments/assets/7d066461-0c33-4e5d-bbc1-1c26a120de2e)
+A folder called coverage-report will also have been generated with **88.27%** coverage.
+
+<img width="938" alt="Captura de pantalla 2025-01-14 123255" src="https://github.com/user-attachments/assets/45f19768-5753-4e85-8bcc-e40ca711d041" />
 
 ## 📡🌐 Christmas Toy Factory API
 
