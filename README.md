@@ -115,7 +115,7 @@ If everything is correct, everything should be OK.
 
 A folder called coverage-report will also have been generated with **88.27%** coverage.
 
-<img width="938" alt="Captura de pantalla 2025-01-14 123255" src="https://github.com/user-attachments/assets/45f19768-5753-4e85-8bcc-e40ca711d041" />
+<img width="938" alt="Captura de pantalla 2025-01-14 123255 (2)" src="https://github.com/user-attachments/assets/6b51aa3b-40f9-427b-90f5-0f03e7670a2e" />
 
 ## 📡🌐 Christmas Toy Factory API
 
