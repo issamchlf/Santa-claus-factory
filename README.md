@@ -221,22 +221,28 @@ The project follows the structure of the MVC design pattern, which allows a bett
 <a href='https://github.com/shivamkapasia0' target="_blank"><img alt='tailwindcss' src='https://img.shields.io/badge/tailwind-100000?style=for-the-badge&logo=tailwindcss&logoColor=FFFFFF&labelColor=06B6D4&color=06B6D4'/></a>
 <a href='https://github.com/shivamkapasia0' target="_blank"><img alt='javascript' src='https://img.shields.io/badge/javascript-100000?style=for-the-badge&logo=javascript&logoColor=000000&labelColor=F7DF1E&color=F7DF1E'/></a>
 
+
 ---
 ## ✍️🙍 Authors
 
-> Sprint 2
+>Sprint 2
 
-- [Issam Chellaf](https://github.com/issamchlf)
-- [Jonathan Torreblanca](https://github.com/Leonkeneddy86)
-- [Matias Stadler](https://github.com/Matias-Stadler)
-- [Jenifer Moyano](https://github.com/soyJenifer)
-- [Fran Muñoz](https://github.com/Crudo7)
-- [René Barco](https://github.com/mrene42)
+| [Issam Chellaf](https://github.com/issamchlf)
+| [Jonathan Torreblanca](https://github.com/Leonkeneddy86)
+| [Matias Stadler](https://github.com/Matias-Stadler)
+| [Jenifer Moyano](https://github.com/soyJenifer)
+| [Fran Muñoz](https://github.com/Crudo7)
+| [René Barco](https://github.com/mrene42)
 
-> Sprint 1
+>Sprint 1
 
-- [Álvaro Cervera](https://github.com/Kalixto73a)
-- [Miguel Ángel García](https://github.com/Mangel111111111)
-- [Manuel Espinosa](https://github.com/Manusitox360)
-- [Antonio Guillén](https://github.com/AntonioGuillen123)
-- [Santino Vigna](https://github.com/SantiVigna)
+| [Álvaro Cervera](https://github.com/Kalixto73a) 
+| [Miguel Ángel García](https://github.com/Mangel111111111) 
+| [Manuel Espinosa](https://github.com/Manusitox360) 
+| [Antonio Guillén](https://github.com/AntonioGuillen123) 
+| [Santino Vigna](https://github.com/SantiVigna) 
+
+
+---
+## 🛡️⚖️ License
+[MIT License](https://github.com/issamchlf/Santa-claus-factory/blob/main/LICENSE)
