@@ -22,8 +22,7 @@ With this system, Santa Claus will be able to ensure that each child receives th
 - Depending on the status of the child (good or bad) they will receive toys or coal.
 - It includes a ‘show’ button to see all the information about the child and their gift.
 
-    <img src="https://github.com/user-attachments/assets/0e94838b-4059-457d-9723-dbfa912f790d" alt="Show_Kid" width="75%">
-
+    <img src="https://github.com/user-attachments/assets/0e94838b-4059-457d-9723-dbfa912f790d" alt="Show_Kid" width="65%">
 
 
 ❄️⛄ **Elves View** ⛄❄️:
@@ -34,9 +33,9 @@ With this system, Santa Claus will be able to ensure that each child receives th
 - Each toy has a description and a recommended age range, which can be modified from the view.
 - Each toy has a ‘show’ button to see more information about the toy.
   
-   <img src="https://github.com/user-attachments/assets/4212c18b-8a81-4411-b04c-c45200f57d1a" alt="Show_Toy" width="75%">
+   <img src="https://github.com/user-attachments/assets/4212c18b-8a81-4411-b04c-c45200f57d1a" alt="Show_Toy" width="65%">
 
-
+---
 ## 🔎📝 Installation Requirements
 
 In order to run this project locally, you need:
@@ -78,8 +77,8 @@ npm install
 
 4. Create an ".env" by taking the example ".env.example" file and modify:
 
-- DB_CONNECTION=mysql
-- DB_DATABASE=chrismas_toy_factory
+- DB_CONNECTION=**mysql**
+- DB_DATABASE=**chrismas_toy_factory**
 
 >[!IMPORTANT]
 >You can create the database name as you wish, just remember to include that name in the ‘database’ in the ‘.env’ file and uncomment the paragraph.
@@ -105,7 +104,7 @@ npm run dev
 php artisan serve
 ```
 
-
+---
 ## 🏃‍♂️🧪 Running Tests
 
 To run test you should uncomment the following lines on the phpunit.xml file.
@@ -134,7 +133,7 @@ You can also see the coverage in a web browser using:
 
 <img width="938" alt="Captura de pantalla 2025-01-14 123255 (2)" src="https://github.com/user-attachments/assets/6b51aa3b-40f9-427b-90f5-0f03e7670a2e" />
 
-
+---
 ## 📊📁 DB Diagram
 Below is a diagram of the database, showing different relationships between tables:
 
@@ -145,7 +144,7 @@ Below is a diagram of the database, showing different relationships between tabl
 - **toy - minimum_age:** One to many relationship. A minimum age can have many toys, but each toy belongs to only one minimum age.
 - **kid_toy (pivot):** many to many relationship. The pivot table can receive as many children as toys.
 
-
+---
 ## 📡🌐 API Endpoints
 We have two tables: Kids and Toys you can create, edit, delete or read a toy or kid from Postman.
 
@@ -199,12 +198,12 @@ http://127.0.0.1:8000/api/elve/{id}
 >[!NOTE]
 >"{id}" is the id number of a object.
 
-
+---
 ## ▶️💻 Project structure
 
 The project follows the structure of the MVC design pattern, which allows a better separation of responsibilities and facilitates the maintenance of the code. We also use a laravel 11 framework to help us develop in PHP.
 
-
+---
 ## 🛠️🚀 Tech and tools
 
 <a href='#777BB4' target="_blank"><img alt='PHP' src='https://img.shields.io/badge/PHP-100000?style=for-the-badge&logo=PHP&logoColor=FFFFFF&labelColor=8892be&color=8892be'/></a>
@@ -222,12 +221,12 @@ The project follows the structure of the MVC design pattern, which allows a bett
 <a href='https://github.com/shivamkapasia0' target="_blank"><img alt='tailwindcss' src='https://img.shields.io/badge/tailwind-100000?style=for-the-badge&logo=tailwindcss&logoColor=FFFFFF&labelColor=06B6D4&color=06B6D4'/></a>
 <a href='https://github.com/shivamkapasia0' target="_blank"><img alt='javascript' src='https://img.shields.io/badge/javascript-100000?style=for-the-badge&logo=javascript&logoColor=000000&labelColor=F7DF1E&color=F7DF1E'/></a>
 
-
+---
 ## ✍️🙍 Authors
 
 > Sprint 2
 
-- [@Issam Chellaf](https://github.com/issamchlf)
+- [Issam Chellaf](https://github.com/issamchlf)
 - [Jonathan Torreblanca](https://github.com/Leonkeneddy86)
 - [Matias Stadler](https://github.com/Matias-Stadler)
 - [Jenifer Moyano](https://github.com/soyJenifer)
