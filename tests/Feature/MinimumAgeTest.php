@@ -11,8 +11,8 @@ class MinimumAgeTest extends TestCase
 
     use RefreshDatabase;
 
-    /** @test */
-    public function it_can_create_a_minimum_age()
+    
+    public function itCanCreateAMinimumAge()
     {
         $data = [
             'min_age' => 3,
@@ -24,8 +24,8 @@ class MinimumAgeTest extends TestCase
         $this->assertDatabaseHas('minimum_age', $data);
     }
 
-    /** @test */
-    public function it_can_update_a_minimum_age()
+   
+    public function itCanUpdateAMinimumAge()
     {
         $minimumAge = MinimumAge::factory()->create();
 
@@ -41,8 +41,8 @@ class MinimumAgeTest extends TestCase
         ]);
     }
 
-    /** @test */
-    public function it_can_delete_a_minimum_age()
+    
+    public function itCanDeleteAMinimumAge()
     {
         $minimumAge = MinimumAge::factory()->create();
 
@@ -53,8 +53,8 @@ class MinimumAgeTest extends TestCase
         ]);
     }
 
-    /** @test */
-    public function it_can_retrieve_related_toys()
+    
+    public function itCanRetrieveRelatedToys()
     {
         $minimumAge = MinimumAge::factory()->create();
         $toy = Toy::factory()->create(['minimum_age_id' => $minimumAge->id]);
@@ -62,3 +62,5 @@ class MinimumAgeTest extends TestCase
         $this->assertTrue($minimumAge->toys->contains($toy));
     }
 }
+
+

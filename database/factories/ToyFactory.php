@@ -17,9 +17,13 @@ class ToyFactory extends Factory
      */
     public function definition(): array
     {
+        if (MinimumAge::count() === 0) {
+            MinimumAge::factory()->count(5)->create();
+        }
+    
         return [
-            'name' => $this->faker->text(), 
-            'description' => $this->faker->text(), 
+            'name' => $this->faker->text(),
+            'description' => $this->faker->text(),
             'image' => $this->faker->imageUrl(),
             'minimum_age_id' => MinimumAge::inRandomOrder()->first()->id,
         ];

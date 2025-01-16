@@ -9,7 +9,7 @@ use App\Models\Kid;
 
 Route::get('/', function () {
     $toys = Toy::with('minimumAge')->get(); 
-    $ageRanges = MinimumAge::all(); // bring all age ranges
+    $ageRanges = MinimumAge::all();
 
     $goodKids = Kid::where('atitude', 'good')->count();  
     $badKids = Kid::where('atitude', 'bad')->count();    
