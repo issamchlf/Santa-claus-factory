@@ -1,17 +1,27 @@
 <?php
 namespace Tests\Feature;
 
+use App\Models\Toy;
 use Tests\TestCase;
 use App\Models\MinimumAge;
+
+use Database\Seeders\DatabaseSeeder;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
-use App\Models\Toy;
 class MinimumAgeTest extends TestCase
 {
 
     use RefreshDatabase;
 
-    
+    public function test_CheckIfMinimumAgeHasToysRelationship()
+    {
+        $this->seed(DatabaseSeeder::class);
+
+        $minimumAge = MinimumAge::first();
+        $toys = Toy::where('minimum_age_id', $minimumAge->id);
+
+        $this->assertInstanceOf(Toy::class, $minimumAge->toys->first());
+    }
     public function itCanCreateAMinimumAge()
     {
         $data = [
