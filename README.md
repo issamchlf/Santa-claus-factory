@@ -118,9 +118,10 @@ To run the project tests, use the following command:
     php artisan test --coverage
 ```
 
-- This project has a **81,5%** of test coverage.
+- This project has a **99,4%** of test coverage.
 
-![image](https://github.com/user-attachments/assets/11cf1200-71ff-4dab-a449-fbdc15188eb2)
+
+![Captura de pantalla 2025-01-20 092021](https://github.com/user-attachments/assets/3af708bc-1405-49c2-8362-2f6d027700ab)
 
 
 You can also see the coverage in a web browser using:
@@ -129,9 +130,10 @@ You can also see the coverage in a web browser using:
   php artisan test --coverage-html=coverage-report
 ``` 
 
-- A folder called coverage-report will also have been generated with **88.27%** coverage.
+- A folder called coverage-report will also have been generated with **99.44%** coverage.
 
-<img width="938" alt="Captura de pantalla 2025-01-14 123255 (2)" src="https://github.com/user-attachments/assets/6b51aa3b-40f9-427b-90f5-0f03e7670a2e" />
+![Captura de pantalla 2025-01-20 092202](https://github.com/user-attachments/assets/db2c0327-8008-46c3-8c4b-2baca1fbafcd)
+
 
 ---
 ## 📊📁 DB Diagram
