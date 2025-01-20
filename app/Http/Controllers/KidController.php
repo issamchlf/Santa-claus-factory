@@ -42,7 +42,6 @@ class KidController extends Controller
         return redirect()->route('santa')->with('success', 'Toys have been assigned to all children!');
     }
 
-    // this is for remove all assigned toy 
     public function removeAssignedToys()
     {
         $kids = Kid::all();
@@ -64,10 +63,8 @@ class KidController extends Controller
 
     
 
-    // Assign a coal toy to a bad kid
     private function assignCoalToy(Kid $kid)
     {
-        // List of coal toys
         $coalToys = [
             [
                 'name' => "Mineral Charcoal",
@@ -96,7 +93,7 @@ class KidController extends Controller
         $toy = Toy::firstOrCreate(
             ['name' => $coalToy['name']],
             [
-                'description' => $coalToy['description'], // Data to insert if not found
+                'description' => $coalToy['description'], 
                 'image' => $coalToy['image'],
                 'minimum_age_id' => $coalToy['minimum_age_id']
             ]
@@ -106,7 +103,6 @@ class KidController extends Controller
         $kid->toys()->sync([$toy->id]);
     }
 
-    // Assign a single travel gift to a good kid between 18 and 99 years old
     private function assignSingleTravelGift(Kid $kid)
     {
         
@@ -136,9 +132,9 @@ class KidController extends Controller
 
         // Find or create the travel gift in the database (the same of other one)
         $toy = Toy::firstOrCreate(
-            ['name' => $travelGift['name']], // Search criteria
+            ['name' => $travelGift['name']], 
             [
-                'description' => $travelGift['description'], // Data to insert if not found
+                'description' => $travelGift['description'], 
                 'image' => $travelGift['image'],
                 'minimum_age_id' => $travelGift['minimum_age_id']
             ]

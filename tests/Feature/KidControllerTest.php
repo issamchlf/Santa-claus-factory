@@ -13,7 +13,6 @@ class KidControllerTest extends TestCase
 {
     use RefreshDatabase;
 
-    // Test for the index route
     public function testIndex()
     {
         $response = $this->get(route('santa'));
@@ -23,14 +22,11 @@ class KidControllerTest extends TestCase
         $response->assertViewHas('kids');
     }
 
-    // Test for assigning toys to kids
     public function testAssignToys()
     {
-        // Create minimum ages and toys
         MinimumAge::factory()->count(3)->create();
         $toys = Toy::factory()->count(3)->create();
 
-        // Create a good kid under 18
         $goodKidUnder18 = Kid::factory()->create([
             'name' => "Jonathan",
             'surname' => "Torreblanca",
@@ -42,17 +38,14 @@ class KidControllerTest extends TestCase
         ]);
         $goodKidUnder18->toys()->attach($toys[0]->id);
 
-        // Create a good kid over 18
         $goodKidAdult = Kid::factory()->create([
             'atitude' => 'good',
             'age' => 25,
         ]);
         $goodKidAdult->toys()->attach($toys[1]->id);
 
-        // Simulate the HTTP POST request
         $response = $this->post(route('assignToys'));
 
-        // Assertions
         $this->assertDatabaseHas('kid_toy', ['kid_id' => $goodKidUnder18->id]);
         $this->assertDatabaseHas('kid_toy', ['kid_id' => $goodKidAdult->id]);
 
@@ -66,7 +59,6 @@ class KidControllerTest extends TestCase
         $response->assertSessionHas('success', 'Toys have been assigned to all children!');
     }
 
-    // Test assigning toys to a good kid between 18 and 99
     public function testAssignToysToGoodKidBetween18And99()
     {
         $kid = Kid::factory()->create(['atitude' => 'good', 'age' => 25]);
@@ -80,7 +72,6 @@ class KidControllerTest extends TestCase
         $this->assertDatabaseHas('kid_toy', ['kid_id' => $kid->id]);
     }
 
-    // Test assigning toys to a good kid under 18
     public function testAssignToysToGoodKidUnder18()
     {
         $kid = Kid::factory()->create(['atitude' => 'good', 'age' => 10]);
@@ -94,7 +85,6 @@ class KidControllerTest extends TestCase
         $this->assertDatabaseHas('kid_toy', ['kid_id' => $kid->id]);
     }
 
-    // Test removing assigned toys
     public function testRemoveAssignedToys()
     {
         $kid = Kid::factory()->create();
@@ -110,7 +100,6 @@ class KidControllerTest extends TestCase
         $this->assertDatabaseMissing('kid_toy', ['kid_id' => $kid->id]);
     }
 
-    // Test assigning coal toys to a bad kid
     public function testAssignCoalToy()
     {
         $this->withoutExceptionHandling();
@@ -131,7 +120,6 @@ class KidControllerTest extends TestCase
         $response->assertSessionHas('success', 'Toys have been assigned to all children!');
     }
 
-    // Test showing a kid
     public function testShow()
     {
         $kid = Kid::factory()->create();
@@ -142,5 +130,5 @@ class KidControllerTest extends TestCase
         $response->assertViewIs('santaShow');
         $response->assertViewHas('kids');
     }
-    
+
 }
