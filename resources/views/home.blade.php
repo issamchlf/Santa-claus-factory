@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="min-h-screen bg-gradient-to-b from-red-500 to-red-700 py-8">
+<div class="container min-h-screen bg-gradient-to-b from-red-500 to-red-700 py-8">
     <p class="font-serif text-center text-4xl font-bold italic text-gray-100 pt-4">
         Welcome to our Factory...
     </p>
