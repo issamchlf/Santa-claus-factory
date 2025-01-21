@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container mx-auto py-8 px-4">
+    <div class=" mx-auto  px-4 bg-gradient-to-b from-red-500 to-red-700 py-8">
         <div class="overflow-hidden rounded-lg shadow-lg text-white">
             <table class="min-w-full table-christmas-gradient table-auto border-collapse text-sm">
                 <thead>

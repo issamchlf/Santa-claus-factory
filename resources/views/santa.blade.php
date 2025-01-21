@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container mx-auto py-8 px-4">
+    <div class=" mx-auto  px-4 bg-gradient-to-b from-red-500 to-red-700 py-8">
         <div class="overflow-hidden rounded-lg shadow-lg text-white">
             <table class="min-w-full table-christmas-gradient table-auto border-collapse text-sm">
                 <thead>
@@ -10,13 +10,15 @@
                             Name</th>
                         <th class="border-b-2 border-red-800 px-6 py-4 text-left text-xs font-bold uppercase tracking-wider">
                             Surname</th>
-                        <th class="border-b-2 border-red-800 px-6 py-4 text-left text-xs font-bold uppercase tracking-wider flex justify-center">
+                        <th
+                            class="border-b-2 border-red-800 px-6 py-4 text-left text-xs font-bold uppercase tracking-wider flex justify-center">
                             Photo</th>
                         <th class="border-b-2 border-red-800 px-6 py-4 text-left text-xs font-bold uppercase tracking-wider">
                             Age</th>
                         <th class="border-b-2 border-red-800 px-6 py-4 text-left text-xs font-bold uppercase tracking-wider">
                             Toys</th>
-                        <th class="border-b-2 border-red-800 px-6 py-4 text-left text-xs font-bold uppercase tracking-wider flex justify-center">
+                        <th
+                            class="border-b-2 border-red-800 px-6 py-4 text-left text-xs font-bold uppercase tracking-wider flex justify-center">
                             Images</th>
                         <th class="border-b-2 border-red-800 px-6 py-4"></th>
                     </tr>
@@ -29,7 +31,8 @@
                                 {{ $kid->name }}</td>
                             <td class="font-serif text-md leading-tight border-dashed text-black border-red-300 px-6 py-4">
                                 {{ $kid->surname }}</td>
-                            <td class="font-serif text-md leading-tight border-dashed border-red-300 px-6 py-4 flex justify-center">
+                            <td
+                                class="font-serif text-md leading-tight border-dashed border-red-300 px-6 py-4 flex justify-center">
                                 <img src="{{ $kid->foto }}" alt="Photo"
                                     class="w-15 h-20 object-cover rounded-full shadow-md shadow-red-700 border-red">
                             </td>
@@ -80,21 +83,22 @@
                 </tbody>
             </table>
         </div>
+
+        <form method="POST" action="{{ route('assignToys') }}" class="mt-4">
+            @csrf
+            <button type="submit"
+                class="ms-9 px-8 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-800 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-offset-2 transition-shadow duration-300 ease-in-out transform hover:scale-105 shadow-md hover:shadow-lg">
+                Assign Toys
+            </button>
+        </form>
+        <form method="POST" action="{{ route('removeAssignedToys') }}" class="mt-2">
+            @csrf
+            @method('DELETE')
+            <button type="submit"
+                class="bg-blue-600 text-white ms-9 mb-5 px-8 py-2 rounded-lg hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-offset-2 transition-shadow duration-300 ease-in-out transform hover:scale-105 shadow-md hover:shadow-lg">
+                Remove Assigned Toys
+            </button>
+        </form>
     </div>
 
-    <form method="POST" action="{{ route('assignToys') }}" class="mt-4">
-        @csrf
-        <button type="submit"
-            class="ms-9 px-8 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-800 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-offset-2 transition-shadow duration-300 ease-in-out transform hover:scale-105 shadow-md hover:shadow-lg">
-            Assign Toys
-        </button>
-    </form>
-    <form method="POST" action="{{ route('removeAssignedToys') }}" class="mt-2">
-        @csrf
-        @method('DELETE')
-        <button type="submit"
-            class="bg-blue-600 text-white ms-9 mb-5 px-8 py-2 rounded-lg hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-offset-2 transition-shadow duration-300 ease-in-out transform hover:scale-105 shadow-md hover:shadow-lg">
-            Remove Assigned Toys
-        </button>
-    </form>
 @endsection
