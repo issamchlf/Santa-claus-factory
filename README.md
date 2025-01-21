@@ -8,15 +8,15 @@ With this system, Santa Claus will be able to ensure that each child receives th
 
 ❄️⛄ **Home View** ⛄❄️:
 
-![Home](https://github.com/user-attachments/assets/6a0c0bf3-a662-4a73-a286-008151d171a5)
+![screencapture-127-0-0-1-8000-2025-01-21-12_05_27](https://github.com/user-attachments/assets/d15c8064-8017-4796-9520-803ee67f69d2)
 
 - It is the main welcome page which includes two tables with the counts of children and toys available. 
 - There are 3 buttons that allow us to move to any view without any problem.
 - It has an effect of snow moving up and down the page and a congratulatory text that moves from right to left in the footer.
 
 ❄️⛄ **Santa View** ⛄❄️:
+![Captura de pantalla 2025-01-21 120701](https://github.com/user-attachments/assets/87ee4b09-105e-4135-beaa-9995e6b4cc51)
 
-![Santa](https://github.com/user-attachments/assets/86c4f55c-f74a-4bd2-bb77-4cfda4c71fef)
 
 - The ‘Santa’ view includes a table listing all children who will receive gifts.
 - Depending on the status of the child (good or bad) they will receive toys or coal.
@@ -27,7 +27,8 @@ With this system, Santa Claus will be able to ensure that each child receives th
 
 ❄️⛄ **Elves View** ⛄❄️:
 
-![Elves](https://github.com/user-attachments/assets/52da31d1-99d1-4966-b3dc-238274e63d16)
+
+![Captura de pantalla 2025-01-21 120724](https://github.com/user-attachments/assets/071af076-2a96-4f68-b384-1259aa3b2e1a)
 
 - The ‘Elves’ view includes a table with a list of the gifts that the elves made.
 - Each toy has a description and a recommended age range, which can be modified from the view.
