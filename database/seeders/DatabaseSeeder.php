@@ -6,6 +6,7 @@ use App\Models\Toy;
 use App\Models\User;
 use App\Models\MinimumAge;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Database\Seeders\KidSeeder;
 use Database\Seeders\ToySeeder;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
@@ -17,7 +18,8 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             MinimumAgeSeeder::class,
-            ToySeeder::class
+            ToySeeder::class,
+            KidSeeder::class
         ]);
         
         // User::factory(10)->create();

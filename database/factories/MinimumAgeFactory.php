@@ -17,7 +17,9 @@ class MinimumAgeFactory extends Factory
     public function definition(): array
     {
         return [
-            'age' => $this->faker->randomDigit(),
+            'min_age' => $this->faker->randomDigit(),
+            'max_age' => $this->faker->randomDigit(),
         ];
     }
 }
+

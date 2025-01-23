@@ -12,10 +12,10 @@ class MinimumAge extends Model
     protected $table = 'minimum_age';
 
     protected $fillable = [
-        'age',
+        'min_age','max_age'
     ];
 
-    function toys(){
+    function Toys(){
         return $this->hasMany(Toy::class);
     }
 }

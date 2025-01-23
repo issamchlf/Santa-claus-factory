@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\MinimumAge;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -16,11 +17,15 @@ class ToyFactory extends Factory
      */
     public function definition(): array
     {
+        if (MinimumAge::count() === 0) {
+            MinimumAge::factory()->count(5)->create();
+        }
+    
         return [
-            'name' => $this->faker->text(), 
-            'description' => $this->faker->text(), 
+            'name' => $this->faker->text(),
+            'description' => $this->faker->text(),
             'image' => $this->faker->imageUrl(),
-            'minimum_age_id' => $this->faker->numberBetween($min = 1, $max = 3)
+            'minimum_age_id' => MinimumAge::inRandomOrder()->first()->id,
         ];
     }
 }

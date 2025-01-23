@@ -13,20 +13,17 @@ class MinimumAgeSeeder extends Seeder
      */
     public function run(): void
     {
-        $ages = [
-                [
-                    'age' => "0"
-                ],
-                [
-                    'age' => "+7"
-                ],
-                [
-                    'age' => "+12"
-                ]
-                ];
+        $ageRanges = [
+            ['min_age' => 0, 'max_age' => 3],
+            ['min_age' => 3, 'max_age' => 7],
+            ['min_age' => 7, 'max_age' => 12],
+            ['min_age' => 12, 'max_age' => 16],
+            ['min_age' => 16, 'max_age' => 18],
+            ['min_age' => 18, 'max_age' => 99], 
+        ];
 
-        foreach ($ages as $age) {
-            MinimumAge::create($age);
+        foreach ($ageRanges as $range) {
+            MinimumAge::create($range);
         }
     }
 }

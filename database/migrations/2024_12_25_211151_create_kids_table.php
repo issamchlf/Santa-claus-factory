@@ -11,10 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('minimum_age', function (Blueprint $table) {
+        Schema::create('kids', function (Blueprint $table) {
             $table->id();
-            $table->integer('min_age');
-            $table->integer('max_age');
+            $table->string('name');
+            $table->string('surname');
+            $table->string('foto');          
+            $table->integer('age');
+            $table->enum('gender', ['boy', 'girl']);
+            $table->enum('atitude', ['good', 'bad']);
+            $table->string('country');
             $table->timestamps();
         });
     }
@@ -24,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('minimum_age');
+        Schema::dropIfExists('kids');
     }
 };

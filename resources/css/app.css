@@ -8,3 +8,36 @@
     font-style: normal;
     src: url('../fonts/PWHappyChristmas.ttf') format('truetype');
 }
+
+/* Dark red background for the table */
+.table-christmas-gradient {
+    background: linear-gradient(135deg, #4A1D1D, #591F1F);
+}
+
+
+/* Snowfall animation */
+@keyframes snow {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0.1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 1;
+    }
+}
+
+.snowflake {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 1.5rem;
+    height: 1.5rem;
+    color: white;
+    user-select: none;
+    pointer-events: none;
+    animation: snow 6s linear infinite;
+    opacity: 0.8;
+    text-shadow: 0 0 10px white;
+}
+
